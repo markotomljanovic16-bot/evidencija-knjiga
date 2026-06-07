@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Evidencija knjiga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Evidencija knjiga</h1>
+        <p>Jednostavna aplikacija za dodavanje i prikaz knjiga.</p>
+    </header>
+
+    <main>
+        <section class="forma">
+            <h2>Dodaj novu knjigu</h2>
+            <input id="naslov" type="text" placeholder="Naslov knjige">
+            <input id="autor" type="text" placeholder="Autor">
+            <input id="godina" type="number" placeholder="Godina">
+            <button id="dodajBtn">Dodaj knjigu</button>
+        </section>
+
+        <section>
+            <h2>Popis knjiga</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naslov</th>
+                        <th>Autor</th>
+                        <th>Godina</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+                <tbody id="tablicaKnjiga"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projektni praktikum - studentski projekt</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
