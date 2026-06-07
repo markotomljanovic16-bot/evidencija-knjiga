@@ -1,5 +1,16 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/")
+def pocetna():
+    return send_from_directory(".", "index.html")
+
+@app.route("/<path:filename>")
+def datoteke(filename):
+    return send_from_directory(".", filename)
 
 app = Flask(__name__)
 CORS(app)
