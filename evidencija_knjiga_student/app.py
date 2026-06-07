@@ -12,9 +12,6 @@ def pocetna():
 def datoteke(filename):
     return send_from_directory(".", filename)
 
-app = Flask(__name__)
-CORS(app)
-
 knjige = []
 
 @app.route("/api/books", methods=["GET"])
